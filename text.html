@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Color Picking Game</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+</head>
+<body>
+
+	<div id="gameTitle" class="container-fluid">
+		<h1>The Great<br><span class="chosen">RGB</span><br>Color Game</h1>
+	</div>
+
+	<div class="container-fluid band">
+		<button id="refresh">New color</button>
+		<span id="message"></span>
+		<button id="easy" class="difficulty">Easy</button>
+		<button id="hard" class="difficulty">Hard</button>
+	</div>
+
+	<div class="container color_squares">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+
+	<script
+		src="https://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+		crossorigin="anonymous">
+	</script>
+
+  	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous">
+	</script>
+
+	<script type="text/javascript" src="./resources/js/doc.js"></script>
+</body>
+</html>
