@@ -7,6 +7,7 @@ var refresh = document.querySelector("#refresh");
 var easyBtn = document.querySelector("#easy")
 var hardBtn = document.querySelector("#hard")
 var difficulty = "none";
+var msg = document.querySelector("#message");
 
 // Change the difficulty to easy
 // (3 squares instead of 6)
@@ -96,6 +97,7 @@ function init() {
 				changeSqrColors();
 			} else {
 				this.style.backgroundColor = "#232323";
+				msg.textContent = "Try Again!";
 			}
 		});
 	}
@@ -105,6 +107,9 @@ function init() {
 	chosenSpan.textContent = chosenClr;
 	chosenSpan.style.color = chosenClr;
 	chosenSpan.style.textTransform = "uppercase";
+	refresh.textContent = "New Color";
+	h1.style.backgroundColor = "#232323";
+	msg.textContent = "";
 }
 
 //Generate a random color.
@@ -121,10 +126,20 @@ function ranColor() {
 function changeSqrColors() {
 	//Change all the squares to be the same color.
 	for( var i = 0; i < sqrs.length; i++ ) {
+		if( difficulty === "easy" && i >= 3 ) {
+			break;
+		}
+
 		sqrs[i].style.backgroundColor = chosenClr;
 	}
 
 	//Change the game title to be the same color as the
 	//chosen color.
 	h1.style.backgroundColor = chosenClr;
+
+	//Player has won, offer to play again by
+	//changing the "new color" button to say
+	//"play again"
+	refresh.textContent = "Play Again";
+	msg.textContent = "Correct!";
 }
