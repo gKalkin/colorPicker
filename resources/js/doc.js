@@ -105,7 +105,6 @@ function init() {
 	//Change the text in the game title to give the player
 	//the RGB info needed to guess the right color.
 	chosenSpan.textContent = chosenClr;
-	chosenSpan.style.color = chosenClr;
 	chosenSpan.style.textTransform = "uppercase";
 	refresh.textContent = "New Color";
 	h1.style.backgroundColor = "#232323";
