@@ -9,9 +9,15 @@ body {
 	float: left;
 	margin: 1.66%;
 	border-radius: 15px;
+	background-color: #232323;
+}
+
+.selected {
+	background-color: gray;
 }
 
 #gameTitle {
 	background-color: rgb(20, 74, 160);
 	color: white;
 }
+
